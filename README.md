@@ -60,7 +60,6 @@ Components:
 ### Built With
 
 * [![C#][C#-shield]][C#-url]
-* [![C#][VB.NET-shield]][VB-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
