@@ -113,3 +113,4 @@ Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/c
 [C#-url]: https://docs.microsoft.com/en-us/dotnet/csharp/
 [VB.NET-shield]: https://img.shields.io/badge/VB.NET-512BD4.svg?style=for-the-badge&logo=visual-studio&logoColor=white
 [VB-url]: https://docs.microsoft.com/en-us/dotnet/visual-basic/
+[linkedin-url]: https://linkedin.com/in/kasper-hjort-jæger
