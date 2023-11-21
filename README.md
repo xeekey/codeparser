@@ -5,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][[linkedin-url](https://www.linkedin.com/in/kasper-hjort-j%C3%A6ger-5121881b5/)]
+[![LinkedIn][linkedin-shield]][[linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -107,3 +107,4 @@ Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/c
 [license-shield]: https://img.shields.io/github/license/xeekey/codeparser.svg?style=for-the-badge
 [license-url]: https://github.com/xeekey/codeparser/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&
+[linkedin-url]: https://www.linkedin.com/in/kasper-hjort-j%C3%A6ger-5121881b5/
