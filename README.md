@@ -104,8 +104,8 @@ Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/c
 [stars-url]: https://github.com/xeekey/codeparser/stargazers
 [issues-shield]: https://img.shields.io/github/issues/xeekey/codeparser.svg?style=for-the-badge
 [issues-url]: https://github.com/xeekey/codeparser/issues
-[license-shield]: https://img.shields.io/github/license/xeekey/codeparser.svg?style=for-the-badge
-[license-url]: https://github.com/xeekey/codeparser/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
