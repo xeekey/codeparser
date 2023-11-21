@@ -1,31 +1,124 @@
-Documentation for CodeParser
-Overview
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/xeekey/codeparser">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">CodeParser</h3>
+
+  <p align="center">
+    A tool for parsing C# and VB.NET projects, extracting structured information into JSON format.
+    <br />
+    <a href="https://github.com/xeekey/codeparser"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/xeekey/codeparser">View Demo</a>
+    ·
+    <a href="https://github.com/xeekey/codeparser/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/xeekey/codeparser/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![CodeParser Screen Shot][product-screenshot]](https://example.com)
+
 CodeParser is a tool designed for parsing C# and VB.NET projects. It analyzes source code files and extracts structured information about classes, methods, properties, and more, saving the output in JSON format.
 
-Components
-C# Parser (csharpparser):
+Components:
+1. **C# Parser (`csharpparser`):** Parses `.cs` files and extracts details about classes, methods, and properties.
+2. **VB.NET Parser (`vbparser`):** Parses `.aspx` and `.vb` files, extracting information about ASPX pages and code-behind classes.
 
-Program.cs
-Parses .cs files in a given directory.
-Extracts details about classes, methods, and properties.
-Outputs a project_structure.json file with the parsed data.
-VB.NET Parser (vbparser):
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Program.cs
-Parses .aspx and .vb files.
-Extracts information about ASPX pages and code-behind classes.
-Outputs a project_structure.json file with the parsed data.
-Usage
-C# Parser:
+### Built With
 
-Set the projectDirectory variable to the path of your C# project.
-Run the parser to generate the JSON file with project structure details.
-VB.NET Parser:
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [VB.NET](https://docs.microsoft.com/en-us/dotnet/visual-basic/)
 
-Set the projectDirectory variable to the path of your VB.NET project.
-Run the parser to generate the JSON file with ASPX and VB file details.
-Output Format
-The output JSON file (project_structure.json) contains structured data about the source code, including class names, method signatures, property details, and more.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Contributing
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Set the `projectDirectory` variable in the respective parser (C# or VB.NET) to the path of your project. Run the parser to generate a JSON file with structured data about your source code.
+
+_For more examples, please refer to the [Documentation](https://github.com/xeekey/codeparser)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
 Contributions to CodeParser are welcome. Please follow the standard GitHub pull request process to submit your changes.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+
+Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/codeparser)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/xeekey/codeparser.svg?style=for-the-badge
+[contributors-url]: https://github.com/xeekey/codeparser/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/xeekey/codeparser.svg?style=for-the-badge
+[forks-url]: https://github.com/xeekey/codeparser/network/members
+[stars-shield]: https://img.shields.io/github/stars/xeekey/codeparser.svg?style=for-the-badge
+[stars-url]: https://github.com/xeekey/codeparser/stargazers
+[issues-shield]: https://img.shields.io/github/issues/xeekey/codeparser.svg?style=for-the-badge
+[issues-url]: https://github.com/xeekey/codeparser/issues
+[license-shield]: https://img.shields.io/github/license/xeekey/codeparser.svg?style=for-the-badge
+[license-url]: https://github.com/xeekey/codeparser/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&
