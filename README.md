@@ -59,8 +59,8 @@ Components:
 
 ### Built With
 
-* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
-* [Roslyn](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/)
+* [![C#][C#]][C#-url]
+* [![C#][VB.NET]][VB-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
