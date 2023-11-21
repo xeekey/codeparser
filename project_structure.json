@@ -1,0 +1,158 @@
+[
+  {
+    "Class": {
+      "Name": "Program",
+      "Methods": [
+        {
+          "Name": "Main",
+          "ReturnType": "void",
+          "Parameters": [
+            {
+              "Name": "args",
+              "Type": "string[]"
+            }
+          ],
+          "Body": "{\r\n        //string projectDirectory = args[0];\r\n        var projectDirectory = \"C:\\\\Users\\\\khj.LASERTRYK\\\\source\\\\repos\\\\csharpparser\";\r\n        var allFiles = Directory.GetFiles(projectDirectory, \"*.cs\", SearchOption.AllDirectories);\r\n\r\n        var allClasses = new List<object>();\r\n\r\n        foreach (var file in allFiles)\r\n        {\r\n            var code = File.ReadAllText(file);\r\n            var syntaxTree = CSharpSyntaxTree.ParseText(code);\r\n\r\n            var root = syntaxTree.GetRoot();\r\n            var classNodes = root.DescendantNodes().OfType<ClassDeclarationSyntax>();\r\n\r\n            foreach (var classNode in classNodes)\r\n            {\r\n                var classDetails = new\r\n                {\r\n                    Class = new\r\n                    {\r\n                        Name = classNode.Identifier.ValueText,\r\n                        Methods = ParseMethods(classNode),\r\n                        Properties = ParseProperties(classNode)\r\n                    }\r\n                };\r\n                allClasses.Add(classDetails);\r\n            }\r\n        }\r\n\r\n        string json = JsonConvert.SerializeObject(allClasses, Formatting.Indented);\r\n        SaveJsonToFile(json, projectDirectory);\r\n    }"
+        },
+        {
+          "Name": "SaveJsonToFile",
+          "ReturnType": "void",
+          "Parameters": [
+            {
+              "Name": "json",
+              "Type": "string"
+            },
+            {
+              "Name": "directory",
+              "Type": "string"
+            }
+          ],
+          "Body": "{\r\n        string filePath = Path.Combine(directory, \"project_structure.json\");\r\n        File.WriteAllText(filePath, json);\r\n        Console.WriteLine($\"JSON saved to {filePath}\");\r\n    }"
+        },
+        {
+          "Name": "ParseMethods",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "classNode",
+              "Type": "ClassDeclarationSyntax"
+            }
+          ],
+          "Body": "{\r\n        var methods = new List<object>();\r\n        foreach (var method in classNode.Members.OfType<MethodDeclarationSyntax>())\r\n        {\r\n            methods.Add(new\r\n            {\r\n                Name = method.Identifier.ValueText,\r\n                ReturnType = method.ReturnType.ToString(),\r\n                Parameters = ParseParameters(method),\r\n                Body = method.Body?.ToString() ?? \"null\"\r\n            });\r\n        }\r\n        return methods;\r\n    }"
+        },
+        {
+          "Name": "ParseProperties",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "classNode",
+              "Type": "ClassDeclarationSyntax"
+            }
+          ],
+          "Body": "{\r\n        var properties = new List<object>();\r\n        foreach (var property in classNode.Members.OfType<PropertyDeclarationSyntax>())\r\n        {\r\n            properties.Add(new\r\n            {\r\n                Name = property.Identifier.ValueText,\r\n                Type = property.Type.ToString()\r\n            });\r\n        }\r\n        return properties;\r\n    }"
+        },
+        {
+          "Name": "ParseParameters",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "method",
+              "Type": "MethodDeclarationSyntax"
+            }
+          ],
+          "Body": "{\r\n        var parameters = new List<object>();\r\n        foreach (var param in method.ParameterList.Parameters)\r\n        {\r\n            parameters.Add(new\r\n            {\r\n                Name = param.Identifier.ValueText,\r\n                Type = param.Type.ToString()\r\n            });\r\n        }\r\n        return parameters;\r\n    }"
+        }
+      ],
+      "Properties": []
+    }
+  },
+  {
+    "Class": {
+      "Name": "Program",
+      "Methods": [
+        {
+          "Name": "Main",
+          "ReturnType": "void",
+          "Parameters": [
+            {
+              "Name": "args",
+              "Type": "string[]"
+            }
+          ],
+          "Body": "{\r\n        string projectDirectory = \"C:\\\\Users\\\\khj.LASERTRYK\\\\Desktop\\\\repos\\\\lasernew\\\\lasertrykwebsites\";\r\n        var allFiles = Directory.GetFiles(projectDirectory, \"*.*\", SearchOption.AllDirectories);\r\n\r\n        var pages = new List<object>();\r\n\r\n        foreach (var file in allFiles)\r\n        {\r\n            if (file.EndsWith(\".aspx\"))\r\n            {\r\n                var aspxData = ParseAspxFile(file);\r\n                pages.Add(new { FilePath = file, Page = aspxData });\r\n            }\r\n            else if (file.EndsWith(\".vb\"))\r\n            {\r\n                var codeBehindData = ParseAspxVbFile(file);\r\n                pages.Add(new { FilePath = file, CodeBehind = codeBehindData });\r\n            }\r\n        }\r\n\r\n        string json = JsonConvert.SerializeObject(pages, Newtonsoft.Json.Formatting.Indented);\r\n        SaveJsonToFile(json, projectDirectory);\r\n    }"
+        },
+        {
+          "Name": "SaveJsonToFile",
+          "ReturnType": "void",
+          "Parameters": [
+            {
+              "Name": "json",
+              "Type": "string"
+            },
+            {
+              "Name": "directory",
+              "Type": "string"
+            }
+          ],
+          "Body": "{\r\n        string filePath = Path.Combine(directory, \"project_structure.json\");\r\n        File.WriteAllText(filePath, json);\r\n        Console.WriteLine($\"JSON saved to {filePath}\");\r\n    }"
+        },
+        {
+          "Name": "ParseAspxFile",
+          "ReturnType": "object",
+          "Parameters": [
+            {
+              "Name": "filePath",
+              "Type": "string"
+            }
+          ],
+          "Body": "{\r\n        var doc = new HtmlDocument();\r\n        doc.Load(filePath);\r\n\r\n        var controls = new List<object>();\r\n        var serverControls = doc.DocumentNode.SelectNodes(\"//*[@runat='server']\");\r\n\r\n        if (serverControls != null)\r\n        {\r\n            foreach (var control in serverControls)\r\n            {\r\n                var controlType = control.Name;\r\n                var id = control.GetAttributeValue(\"id\", string.Empty);\r\n                var eventHandlers = new Dictionary<string, string>();\r\n\r\n                // Extracting event handlers (e.g., OnClick, OnTextChanged, etc.)\r\n                foreach (var attribute in control.Attributes)\r\n                {\r\n                    if (attribute.Name.StartsWith(\"on\", StringComparison.OrdinalIgnoreCase))\r\n                    {\r\n                        eventHandlers.Add(attribute.Name, attribute.Value);\r\n                    }\r\n                }\r\n\r\n                controls.Add(new\r\n                {\r\n                    Type = controlType,\r\n                    ID = id,\r\n                    Events = eventHandlers\r\n                });\r\n            }\r\n        }\r\n\r\n        return new { Controls = controls };\r\n    }"
+        },
+        {
+          "Name": "ParseAspxVbFile",
+          "ReturnType": "object",
+          "Parameters": [
+            {
+              "Name": "filePath",
+              "Type": "string"
+            }
+          ],
+          "Body": "{\r\n        var code = File.ReadAllText(filePath);\r\n        var syntaxTree = VisualBasicSyntaxTree.ParseText(code);\r\n\r\n        var root = syntaxTree.GetRoot();\r\n        var classNodes = root.DescendantNodes().OfType<ClassBlockSyntax>();\r\n\r\n        var classes = new List<object>();\r\n        foreach (var classNode in classNodes)\r\n        {\r\n            var className = classNode.ClassStatement.Identifier.ValueText;\r\n            var methods = ParseMethods(classNode);\r\n            var properties = ParseProperties(classNode);\r\n\r\n            classes.Add(new\r\n            {\r\n                Name = className,\r\n                Methods = methods,\r\n                Properties = properties\r\n            });\r\n        }\r\n\r\n        return new { Classes = classes };\r\n    }"
+        },
+        {
+          "Name": "ParseMethods",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "classNode",
+              "Type": "ClassBlockSyntax"
+            }
+          ],
+          "Body": "{\r\n        var methods = new List<object>();\r\n        foreach (var method in classNode.Members.OfType<MethodBlockSyntax>())\r\n        {\r\n            var methodStatement = method.BlockStatement as MethodStatementSyntax;\r\n            var methodName = methodStatement?.Identifier.ValueText;\r\n            var returnType = methodStatement?.AsClause?.Type.ToString() ?? \"Sub\";\r\n\r\n            var parameters = ParseParameters(method);\r\n\r\n            methods.Add(new\r\n            {\r\n                Name = methodName,\r\n                ReturnType = returnType,\r\n                Parameters = parameters,\r\n                Body = method.Statements.ToString() // Simplified representation of the method body\r\n            });\r\n        }\r\n        return methods;\r\n    }"
+        },
+        {
+          "Name": "ParseProperties",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "classNode",
+              "Type": "ClassBlockSyntax"
+            }
+          ],
+          "Body": "{\r\n        var properties = new List<object>();\r\n        foreach (var property in classNode.Members.OfType<PropertyBlockSyntax>())\r\n        {\r\n            var propertyName = property.PropertyStatement.Identifier.ValueText;\r\n            var propertyType = property.PropertyStatement.AsClause?.Type().ToString() ?? \"Property\";\r\n\r\n            properties.Add(new\r\n            {\r\n                Name = propertyName,\r\n                Type = propertyType\r\n            });\r\n        }\r\n        return properties;\r\n    }"
+        },
+        {
+          "Name": "ParseParameters",
+          "ReturnType": "List<object>",
+          "Parameters": [
+            {
+              "Name": "method",
+              "Type": "MethodBlockSyntax"
+            }
+          ],
+          "Body": "{\r\n        var parameters = new List<object>();\r\n\r\n        var parameterList = (method.BlockStatement as MethodStatementSyntax)?.ParameterList;\r\n        if (parameterList != null)\r\n        {\r\n            foreach (var param in parameterList.Parameters)\r\n            {\r\n                var paramName = param.Identifier.Identifier.ValueText;\r\n                var paramType = param.AsClause?.Type?.ToString();\r\n\r\n                parameters.Add(new\r\n                {\r\n                    Name = paramName,\r\n                    Type = paramType\r\n                });\r\n            }\r\n        }\r\n\r\n        return parameters;\r\n    }"
+        }
+      ],
+      "Properties": []
+    }
+  }
+]
