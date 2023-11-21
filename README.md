@@ -105,10 +105,9 @@ Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/c
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/xeekey/codeparser/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/kasper-hjort-jæger
 [product-screenshot]: images/screenshot.png
 [C#-shield]: https://img.shields.io/badge/C%23-239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white
 [C#-url]: https://docs.microsoft.com/en-us/dotnet/csharp/
 [VB.NET-shield]: https://img.shields.io/badge/VB.NET-512BD4.svg?style=for-the-badge&logo=visual-studio&logoColor=white
 [VB-url]: https://docs.microsoft.com/en-us/dotnet/visual-basic/
-[linkedin-url]: https://linkedin.com/in/kasper-hjort-jæger
