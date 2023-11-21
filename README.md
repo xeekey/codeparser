@@ -10,14 +10,18 @@
     <img src="[stars-shield]" alt="Stargazers">
   </a>
   <a href="[issues-url]">
-    <img src="[issues-shield]" alt="Issues">
+    <img src=[issues-shield] alt="Issues">
   </a>
   <a href="[linkedin-url]">
     <img src="[linkedin-shield]" alt="LinkedIn">
   </a>
 </p>
 
-
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Linkedin][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
