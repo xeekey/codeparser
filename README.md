@@ -109,8 +109,7 @@ Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/c
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/kasper-hjort-jæger
 [product-screenshot]: images/screenshot.png
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
-
+[C#-shield]: https://img.shields.io/badge/C%23-239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white
+[C#-url]: https://docs.microsoft.com/en-us/dotnet/csharp/
+[VB.NET-shield]: https://img.shields.io/badge/VB.NET-512BD4.svg?style=for-the-badge&logo=visual-studio&logoColor=white
+[VB-url]: https://docs.microsoft.com/en-us/dotnet/visual-basic/
