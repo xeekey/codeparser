@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -6,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][[linkedin-url](https://www.linkedin.com/in/kasper-hjort-j%C3%A6ger-5121881b5/)]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -45,14 +44,11 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![CodeParser Screen Shot][product-screenshot]](https://example.com)
 
 CodeParser is a tool designed for parsing C# and VB.NET projects. It analyzes source code files and extracts structured information about classes, methods, properties, and more, saving the output in JSON format.
 
@@ -65,7 +61,7 @@ Components:
 ### Built With
 
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
-* [VB.NET](https://docs.microsoft.com/en-us/dotnet/visual-basic/)
+* [Roslyn](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,21 +90,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
 Project Link: [https://github.com/xeekey/codeparser](https://github.com/xeekey/codeparser)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/xeekey/codeparser.svg?style=for-the-badge
