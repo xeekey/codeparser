@@ -1,27 +1,11 @@
 <a name="readme-top"></a>
 <p align="center">
-  <a href="[contributors-url]">
-    <img src="[contributors-shield]" alt="Contributors">
-  </a>
-  <a href="[forks-url]">
-    <img src="[forks-shield]" alt="Forks">
-  </a>
-  <a href="[stars-url]">
-    <img src="[stars-shield]" alt="Stargazers">
-  </a>
-  <a href="[issues-url]">
-    <img src=[issues-shield] alt="Issues">
-  </a>
-  <a href="[linkedin-url]">
-    <img src="[linkedin-shield]" alt="LinkedIn">
-  </a>
-</p>
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Linkedin][linkedin-shield]][linkedin-url]
+</p>
 
 <!-- PROJECT LOGO -->
 <br />
